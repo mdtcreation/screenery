@@ -21,7 +21,7 @@ export default function Screen({ videos, ticker }: ScreenProps) {
                         <p className="text-white font-bold">Daftar Penjualan Barang</p>
                         <p className="text-white">Kantor Cabang</p> 
                     </div>
-                    <div className="h-7/10 bg-white p-2">
+                    <div className="h-7/10 bg-gray-400 p-2">
                         
                     </div>
                     <div className="h-2/10 bg-red-900 relative">
