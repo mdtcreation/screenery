@@ -116,13 +116,12 @@ export default function Screen({ videos, ticker }: ScreenProps) {
     };
     return (
         <ScreenWrapper>
-            <div className="flex-1 w-full grid grid-flow-col grid-cols-4 gap-3 mb-2 overflow-hidden">
-                <div className="col-span-3 rounded-lg overflow-hidden bg-black">
+            <div className="flex-1 w-full grid grid-flow-col grid-cols-4 gap-3 mb-2 overflow-hidden min-h-0">
+                <div className="col-span-3 rounded-lg overflow-hidden bg-black h-full">
                     <VideoPlayer videos={videos || ["/videos/1.mp4", "/videos/2.mp4"]} />
-                    {/* <VideoPlayer videos={videos} /> */}
                 </div>
-                <div className="col-span-1 rounded-lg border-2 border-gray-200 flex flex-col overflow-hidden">
-                    <div className="h-[10%] bg-red-900 p-2">
+                <div className="col-span-1 rounded-lg border-2 border-gray-200 flex flex-col overflow-hidden min-h-0">
+                    <div className="h-[10%] bg-red-900 p-2 shrink-0">
                         <DateTime />
                     </div>
                     <div className="h-[70%] bg-gray-200 p-2 text-black flex flex-col overflow-hidden">
@@ -137,12 +136,12 @@ export default function Screen({ videos, ticker }: ScreenProps) {
                             headers={tableHeaders}
                             data={tableData}
                             height="full"
-                            className="flex-1"
+                            className="flex-1 min-h-0"
                             scrollInterval={5000}
                             scrollStep={350}
                         />
                     </div>
-                    <div className="h-[20%] bg-red-900 relative">
+                    <div className="h-[20%] bg-red-900 relative shrink-0">
                         <Image src="/img/20240502121225663320b9409aa.gif" alt="gif" fill={true} className="object-contain" />
                     </div>
                 </div>
