@@ -17,7 +17,7 @@ export default function Ticker({ text }: TickerProps) {
   }, [text]);
 
   return (
-    <div className="w-full h-12 bg-red-500 text-white overflow-hidden rounded-lg">
+    <div className="w-full h-12 bg-red-900 text-white overflow-hidden rounded-lg">
       <div className="animate-marquee whitespace-nowrap">
         <span className="inline-block px-4 align-middle">{tickerText}</span>
       </div>

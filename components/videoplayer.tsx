@@ -69,20 +69,21 @@ export default function VideoPlayer({ videos }: VideoPlayerProps) {
     }
 
     return (
-        <div 
+        <div
             className="w-full h-full relative"
             onClick={handlePlayPause}
         >
-            <video 
-                ref={videoRef} 
+            <video
+                ref={videoRef}
                 controls={false}
-                autoPlay
-                playsInline
+                autoPlay={true}
                 className="w-full h-full object-contain"
+                muted
+                playsInline
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
             />
-            
+
             {/* Optional: Add play/pause overlay */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                 <button className="bg-black bg-opacity-50 rounded-full p-4">
